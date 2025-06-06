@@ -16,6 +16,9 @@ app.use('/auth', authRoutes);
 app.use('/asistencia', asistenciaRoutes);
 
 const PORT = process.env.PORT || 3000;
+app.get('/', (req, res) => {
+  res.send('Bienvenido a la aplicación de registro de asistencia');
+});
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
